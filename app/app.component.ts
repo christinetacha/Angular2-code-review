@@ -15,13 +15,21 @@ import { Component } from 'angular2/core';
 })
 
 export class AppComponent {
+
 }
 
 @Component({
   selector: 'my-input',
   template: `
-  <input type="text" #myInput>
-  <button (click)="onClick(myInput.value)">Add Meal</button>
+  <div class="ui raised segment">
+    <h2 class="ui header">Enter Details:</h2>
+    <form #f="ngForm"(ngSumbit)="onSubmit(f.value)" class="ui form">
+    <div class="field">
+      <label for="mealName">Name:</label>
+      <input type="text" id="mealName" placeholder="name" ngModel>
+    </div>
+    <button type="submit" class="ui button">Submit</button>
+  </div>
   `
 })
 
