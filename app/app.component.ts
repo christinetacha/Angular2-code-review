@@ -17,8 +17,24 @@ import { Component } from 'angular2/core';
 export class AppComponent {
 }
 
-export class Model {
-  title:string = "";
-  calories:string = "";
-  details:string = "";
+@Component({
+  selector: 'my-input',
+  template: `
+  <input type="text" #myInput>
+  <button>Add Meal</button>
+  `
+})
+
+export class MyInput {
+  onClick(value) {
+    console.log(value);
+  }
 }
+
+
+
+// export class MealInput {
+//   title:string = "";
+//   calories:string = "";
+//   details:string = "";
+// }
