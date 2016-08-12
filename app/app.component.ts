@@ -21,7 +21,7 @@ export class AppComponent {
   selector: 'my-input',
   template: `
   <input type="text" #myInput>
-  <button>Add Meal</button>
+  <button (click)="onClick(myInput.value)">Add Meal</button>
   `
 })
 
