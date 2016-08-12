@@ -5,6 +5,9 @@ import { Component } from 'angular2/core';
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
+    <div class="container">
+      <form><h3>Input your meal:</h3></form>
+    </div>
   </div>
   `
 })
@@ -12,5 +15,8 @@ import { Component } from 'angular2/core';
 export class AppComponent {
 }
 
-export class Album {
+export class Model {
+  title:string = "";
+  calories:string = "";
+  details:string = "";
 }
